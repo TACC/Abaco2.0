@@ -59,13 +59,13 @@ We can also add local files to our image using the ``ADD`` instruction. We can a
 ADD Example.py /Users/kwhitley/PycharmProjects/Test
 ```
 
-The last step is write the command from running the application, which is simply- `python ./Example.py`. We use the `CMD` command to do that:
+The last step is write the command from running the application, which is simply- ``python ./Example.py``. We use the ``CMD`` command to do that:
 
 ```
 CMD ["python", "./Example.py"]
 ```
 
-The primary purpose of `CMD` is to tell the container which command it should run when it is started. With that, our `Dockerfile` is now ready. This is what is looks like:
+The primary purpose of ``CMD`` is to tell the container which command it should run when it is started. With that, our ``Dockerfile`` is now ready. This is what is looks like:
 
 .. code-block:: bash
 
@@ -111,9 +111,11 @@ Now that we going to register a docker container as an actor, to do this we have
 
 Once you have the lastest python next you want to see if you have pip install. Similar to python the buildin version of pip is 2.7 but we want pip3 so you want to type in the follow:
 
-```
+.. code-block:: bash
+
 >>> pip3
-```
+
+
 .. note:: If you dont have pip3 install use the following to install it: >>> sudo python3 get-pip.py
 
 Pure Python
@@ -154,7 +156,7 @@ You use the consumerKey and consumerSecret to generate Oauth tokens, which are t
 Reuse an existing Oauth client
 ------------------------------
 
-Once you generate a client, you can re-use its key and secret. Clients can be created using the Python-based approach illustrated above, via the TACC Cloud CLI `clients-create` command, or by a direct, correctly-structured ` POST` to the clients web service. No matter how you've created a client, setting AgavePy up to use it works the same way:
+Once you generate a client, you can re-use its key and secret. Clients can be created using the Python-based approach illustrated above, via the TACC Cloud CLI ``clients-create`` command, or by a direct, correctly-structured `` POST`` to the clients web service. No matter how you've created a client, setting AgavePy up to use it works the same way:
 
 .. code-block:: bash
 
@@ -166,7 +168,7 @@ Once you generate a client, you can re-use its key and secret. Clients can be cr
 ...            api_secret='5EbjEOcyzzIsAAE3vBS7nspVqHQa')
 
 
-The Agave object ` ag` is now configured to talk to all TACC Cloud services. Here's an example: Let's retrieve a the curent user's **profile**.
+The Agave object ``ag`` is now configured to talk to all TACC Cloud services. Here's an example: Let's retrieve a the curent user's **profile**.
 
 .. code-block:: bash
  
