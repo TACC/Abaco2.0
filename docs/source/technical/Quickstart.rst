@@ -18,8 +18,9 @@ Installing Agave is very simple, start by typing the following in your terminal:
 .. note:: Install from PYPI(https://pypi.org)):
 
 .. code-block:: bash
+  
+  >>> pip install agavepy
 
->>> pip install agavepy
 
 The agavepy package is complete Python bining for TACC's Agave API. Here we can create a docker image that contains the python function and exectes it as part of the default command.
 
@@ -27,12 +28,12 @@ Now, that we have the Agavpy package install, lets create a docker image that co
 
 .. code-block:: bash
 
->>> def string_count():
-        message = "Hey my name is john"
-        words = message.split(' ')
-        word_count = len(words)
-        print('Number of words is: ' + str(word_count))
-    string_count()
+  >>> def string_count():
+         message = "Hey my name is john"
+         words = message.split(' ')
+         word_count = len(words)
+         print('Number of words is: ' + str(word_count))
+     string_count()
 
 
 Building Images From a Dockerfile
@@ -48,8 +49,7 @@ we can use the ``FROM`` instruction to start our new image from a known image. t
 
 .. code-block:: bash
 
-FROM python
-
+  FROM python
 
 The ADD instruction
 -------------------
@@ -58,25 +58,24 @@ We can also add local files to our image using the ``ADD`` instruction. We can a
 
 .. code-block:: bash
 
-ADD Example.py /Users/kwhitley/PycharmProjects/Test
+  ADD Example.py /Users/kwhitley/PycharmProjects/Test
 
 
 The last step is write the command from running the application, which is simply- ``python ./Example.py``. We use the ``CMD`` command to do that:
 
 .. code-block:: bash
 
-CMD ["python", "./Example.py"]
-
+  CMD ["python", "./Example.py"]
 
 The primary purpose of ``CMD`` is to tell the container which command it should run when it is started. With that, our ``Dockerfile`` is now ready. This is what is looks like:
 
 .. code-block:: bash
 
-FROM python
+  FROM python
 
-ADD Example.py /Users/kwhitley/PycharmProjects/Test
+  ADD Example.py /Users/kwhitley/PycharmProjects/Test
 
-CMD ["python", "./Example.py"]
+  CMD ["python", "./Example.py"]
 
 
 Now that we have our ``Dockerfile``, we can build our image. the `docker build` command does the heavy lifting of creating a Docker image from a ``Dockerfile``.
@@ -110,15 +109,15 @@ Now that we going to register a docker container as an actor, to do this we have
 
 .. code-block:: bash
 
->>> python3
+  >>> python3
 
-.. note:: This checks to see if you have python3 install in not please visit the pthon website(https://www.python.org).
+.. note:: This checks to see if you have python3 install in not please visit the python website(https://www.python.org).
 
 Once you have the lastest python next you want to see if you have pip install. Similar to python the buildin version of pip is 2.7 but we want pip3 so you want to type in the follow:
 
 .. code-block:: bash
 
->>> pip3
+    >>> pip3
 
 
 .. note:: If you dont have pip3 install use the following to install it: >>> sudo python3 get-pip.py
@@ -136,25 +135,23 @@ First, type in the following line in your shell:
 
 .. code-block:: bash
 
->>> from agavepy.agave import Agave
+  >>> from agavepy.agave import Agave
 
 
 Next, type in the following line in your shell:
 
 .. code-block:: bash
 
->>> ag = Agave(api_server='http://api.tacc.utexas.edu')
-
+   >>> ag = Agave(api_server='http://api.tacc.utexas.edu')
 
 Once the object is instantiated, interact with it according to the API documentation and your specific usage needs.Create a new Oauth client
 
 .. code-block:: bash
 
->>> ag = Agave(api_server='https://api.tacc.utexas.edu',
-...            username='your username',
-...            password='your password')
->>> ag.clients.create(body={'clientName': 'enter a client name'})
-
+  >>> ag = Agave(api_server='https://api.tacc.utexas.edu',
+  ...            username='your username',
+  ...            password='your password')
+  >>> ag.clients.create(body={'clientName': 'enter a client name'})
 
 You use the consumerKey and consumerSecret to generate Oauth tokens, which are temporary credentials that you can use in place of putting your real credentials into code that is scripting against the TACC APIs.
 
@@ -165,16 +162,16 @@ Once you generate a client, you can re-use its key and secret. Clients can be cr
 
 .. code-block:: bash
 
->>> from agavepy.agave import Agave
->>> ag = Agave(api_server='https://api.tacc.utexas.edu',
-...            username='your username', password='your password',
-...            client_name='my_client',
-...            api_key='kV4XLPhVBAv9RTf7a2QyBHhQAXca',
-...            api_secret='5EbjEOcyzzIsAAE3vBS7nspVqHQa')
+  >>> from agavepy.agave import Agave
+  >>> ag = Agave(api_server='https://api.tacc.utexas.edu',
+  ...            username='your username', password='your password',
+  ...            client_name='my_client',
+  ...            api_key='kV4XLPhVBAv9RTf7a2QyBHhQAXca',
+  ...            api_secret='5EbjEOcyzzIsAAE3vBS7nspVqHQa')
 
 
 The Agave object ``ag`` is now configured to talk to all TACC Cloud services. Here's an example: Let's retrieve a the curent user's **profile**.
 
 .. code-block:: bash
- 
+
  >>> ag.profiles.get()

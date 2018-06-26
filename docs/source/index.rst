@@ -9,8 +9,9 @@ Welcome to Abaco
     
     This page is still under :redbold:`unconstruction`.
     
-    What is Abaco
-    --------------
+   
+What is Abaco
+--------------
     
 **Abaco** is a web service and distributed sysytem that implements the actor model of concurrent computation whereby each actor registed in the system is associated with the Docker images.
 
