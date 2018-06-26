@@ -22,3 +22,9 @@ Three main things are collected  in the process of excecting a actor container:
  * States
  * Logs
  * Statistics
+
+Using Abaco
+_______________
+
+Abaco is available to Computer Science researchers and students. To learn more about the the system, follow the 
+instructions in :doc:`getting-started/index`. 
