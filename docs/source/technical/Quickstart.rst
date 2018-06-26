@@ -21,7 +21,6 @@ Installing Agave is very simple, start by typing the following in your terminal:
   
   >>> pip install agavepy
 
-
 The agavepy package is complete Python bining for TACC's Agave API. Here we can create a docker image that contains the python function and exectes it as part of the default command.
 
 Now, that we have the Agavpy package install, lets create a docker image that contains they python function and executes it as part of the default command. First create a python file called `Example.py` and paste the same code below in it.
@@ -105,7 +104,7 @@ Now that we going to register a docker container as an actor, to do this we have
 
 .. note:: Do this excerise we are going to use a a python shell. the default python shell is python 2.7.5 but we want to use python 3.6.5
 
- To begin this excerise open your ``Terminal``, once you have the terminal open type in the following:
+To begin this excerise open your ``Terminal``, once you have the terminal open type in the following:
 
 .. code-block:: bash
 
@@ -129,7 +128,7 @@ Authentication and authorization to the TACC Cloud APIs uses OAuth2`_, a widely-
 
 This is covered in great detail in our Developer Documentation(http://developer.tacc.cloud/docs/abaco/developer-docs.html) but some key concepts will be highlighted here, interleaved with Python code.
 
-The first step is to create a python object called ``ag`` pointing to an API server. Your project likely has its own API server, which are discoverable using the ``tenants-list --rich`` command in the TACC cloud CLI. for now, we can assume `api.tacc.utexas.edu(the default value) will work for you.
+The first step is to create a python object called ``ag`` pointing to an API server. Your project likely has its own API server, which are discoverable using the ``tenants-list --rich`` command in the TACC cloud CLI. for now, we can assume (http://api.tacc.utexas.edu)the default value will work for you.
 
 First, type in the following line in your shell:
 
@@ -158,7 +157,7 @@ You use the consumerKey and consumerSecret to generate Oauth tokens, which are t
 Reuse an existing Oauth client
 ------------------------------
 
-Once you generate a client, you can re-use its key and secret. Clients can be created using the Python-based approach illustrated above, via the TACC Cloud CLI ``clients-create`` command, or by a direct, correctly-structured `` POST`` to the clients web service. No matter how you've created a client, setting AgavePy up to use it works the same way:
+Once you generate a client, you can re-use its key and secret. Clients can be created using the Python-based approach illustrated above, via the TACC Cloud CLI ``clients-create`` command, or by a direct, correctly-structured ``POST`` to the clients web service. No matter how you've created a client, setting AgavePy up to use it works the same way:
 
 .. code-block:: bash
 
