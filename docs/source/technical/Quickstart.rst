@@ -31,9 +31,7 @@ Now, that we have the Agavpy package install, lets create a docker image that co
         message = "Hey my name is john"
         words = message.split(' ')
         word_count = len(words)
-
         print('Number of words is: ' + str(word_count))
-
     string_count()
 
 
@@ -72,9 +70,7 @@ The primary purpose of `CMD` is to tell the container which command it should ru
 .. code-block:: bash
 
 FROM python
-
 ADD Example.py /Users/kwhitley/PycharmProjects/Test
-
 CMD ["python", "./Example.py"]
 
 
@@ -118,8 +114,7 @@ Once you have the lastest python next you want to see if you have pip install. S
 ```
 >>> pip3
 ```
-.. note:: If you dont have pip3 install use the following to install it:
->>> sudo python3 get-pip.py
+.. note:: If you dont have pip3 install use the following to install it: >>> sudo python3 get-pip.py
 
 Pure Python
 -----------
