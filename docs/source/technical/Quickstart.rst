@@ -15,7 +15,7 @@ Installing Agave
 
 Installing Agave is very simple, start by typing the following in your terminal:
 
-Install from PYPI(https://pypi.org)):
+.. note:: Install from PYPI(https://pypi.org)):
 
 .. code-block:: bash
 pip install agavepy
@@ -25,6 +25,7 @@ The agavepy package is complete Python bining for TACC's Agave API. Here we can 
 Now, that we have the Agavpy package install, lets create a docker image that contains they python function and executes it as part of the default command. First create a python file called `Example.py` and paste the same code below in it.
 
 .. code-block:: bash
+
 def string_count():
     message = "Hey my name is john"
     words = message.split(' ')
@@ -64,19 +65,20 @@ CMD ["python", "./Example.py"]
 ```
 
 The primary purpose of `CMD` is to tell the container which command it should run when it is started. With that, our `Dockerfile` is now ready. This is what is looks like:
-```
+
+.. code-block:: bash
 FROM python
 
 ADD Example.py /Users/kwhitley/PycharmProjects/Test
 
 CMD ["python", "./Example.py"]
-```
 
-Now that we have our `Dockerfile`, we can build our image. the `docker build` command does the heavy lifting of creating a Docker image from a `Dockerfile`.
+
+Now that we have our ``Dockerfile``, we can build our image. the `docker build` command does the heavy lifting of creating a Docker image from a ``Dockerfile``.
 
 The section below shows you the output of running the same.
 
-```
+.. code-block:: bash
 Sending build context to Docker daemon  45.96MB
 Step 1/3 : FROM python
  ---> 8c811b4aec35
@@ -88,7 +90,7 @@ Step 3/3 : CMD ["python", "/Example.py"]
  ---> b94a5737d86d
 Successfully built b94a5737d86d
 Successfully tagged python_example:latest
-```
+
 
 Congratulations! you have successfully created your first docker images
 
@@ -96,7 +98,7 @@ Actors
 ------
 Now that we going to register a docker container as an actor, to do this we have to an API client and once we have this you only have to do the set up once!
 
-Do this excerise we are going to use a a python shell. the default python shell is python 2.7.5 but we want to use python 3.6.5
+.. note:: Do this excerise we are going to use a a python shell. the default python shell is python 2.7.5 but we want to use python 3.6.5
 
  To begin this excerise open your `Terminal`, once you have the terminal open type in the following:
 
@@ -119,7 +121,7 @@ If you dont have pip3 install use the following to install it:
 Pure Python
 -----------
 
-Authentication and authorization to the TACC Cloud APIs uses `OAuth2`_, a widely-adopted web standard. Our implementation of Oauth2 is designed to give you the flexibility you need to script and automate use of TACC Cloud while keeping your access credentials and digital assets secure.
+Authentication and authorization to the TACC Cloud APIs uses OAuth2`_, a widely-adopted web standard. Our implementation of Oauth2 is designed to give you the flexibility you need to script and automate use of TACC Cloud while keeping your access credentials and digital assets secure.
 
 This is covered in great detail in our Developer Documentation(http://developer.tacc.cloud/docs/abaco/developer-docs.html) but some key concepts will be highlighted here, interleaved with Python code.
 
