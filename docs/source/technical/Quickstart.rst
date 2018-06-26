@@ -73,7 +73,9 @@ The primary purpose of ``CMD`` is to tell the container which command it should 
 .. code-block:: bash
 
 FROM python
+
 ADD Example.py /Users/kwhitley/PycharmProjects/Test
+
 CMD ["python", "./Example.py"]
 
 
