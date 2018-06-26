@@ -11,6 +11,7 @@ Welcome to Abaco's Documentation!
    :caption: Introduction:
    
    index
+   getting-started/index
    
 
 
