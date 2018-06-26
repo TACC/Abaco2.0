@@ -17,13 +17,16 @@ Installing Agave is very simple, start by typing the following in your terminal:
 
 Install from PYPI(https://pypi.org)):
 
-``pip install agavepy``
+.. code-block:: bash
+
+pip install agavepy
 
 The agavepy package is complete Python bining for TACC's Agave API. Here we can create a docker image that contains the python function and exectes it as part of the default command.
 
 Now, that we have the Agavpy package install, lets create a docker image that contains they python function and executes it as part of the default command. First create a python file called `Example.py` and paste the same code below in it.
 
-``
+.. code-block:: bash
+
 def string_count():
     message = "Hey my name is john"
     words = message.split(' ')
@@ -32,7 +35,7 @@ def string_count():
     print('Number of words is: ' + str(word_count))
 
 string_count()
-``
+
 
 Building Images From a Dockerfile
 ----------------------------------
@@ -43,14 +46,14 @@ We can build images from a text file called a Dockerfile. You can think of a Doc
 
 The FROM instruction
 --------------------
-we can use the `FROM` instruction to start our new image from a known image. this should be the first line of our Dockerfile.
+we can use the ``FROM`` instruction to start our new image from a known image. this should be the first line of our Dockerfile.
 ```
 FROM python
 ```
 The ADD instruction
 -------------------
 
-We can also add local files to our image using the `ADD` instruction. We can add a the file `Example.py` in our local directory to the `Users/kwhitley/PycharmProjects/Test` directory in our container with the following instruction:
+We can also add local files to our image using the ``ADD`` instruction. We can add a the file ``Example.py`` in our local directory to the ``Users/kwhitley/PycharmProjects/Test`` directory in our container with the following instruction:
 
 ``` 
 ADD Example.py /Users/kwhitley/PycharmProjects/Test
