@@ -84,6 +84,7 @@ Now that we have our ``Dockerfile``, we can build our image. the `docker build` 
 The section below shows you the output of running the same.
 
 .. code-block:: bash
+
 Sending build context to Docker daemon  45.96MB
 Step 1/3 : FROM python
  ---> 8c811b4aec35
