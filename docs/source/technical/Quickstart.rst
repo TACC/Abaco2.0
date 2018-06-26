@@ -18,6 +18,7 @@ Installing Agave is very simple, start by typing the following in your terminal:
 .. note:: Install from PYPI(https://pypi.org)):
 
 .. code-block:: bash
+
 pip install agavepy
 
 The agavepy package is complete Python bining for TACC's Agave API. Here we can create a docker image that contains the python function and exectes it as part of the default command.
@@ -67,6 +68,7 @@ CMD ["python", "./Example.py"]
 The primary purpose of `CMD` is to tell the container which command it should run when it is started. With that, our `Dockerfile` is now ready. This is what is looks like:
 
 .. code-block:: bash
+
 FROM python
 
 ADD Example.py /Users/kwhitley/PycharmProjects/Test
@@ -79,6 +81,7 @@ Now that we have our ``Dockerfile``, we can build our image. the `docker build` 
 The section below shows you the output of running the same.
 
 .. code-block:: bash
+
 Sending build context to Docker daemon  45.96MB
 Step 1/3 : FROM python
  ---> 8c811b4aec35
@@ -129,22 +132,27 @@ The first step is to create a python object called `ag` pointing to an API serve
 
 First, type in the following line in your shell:
 
-```
+.. code-block:: bash
+
 >>> from agavepy.agave import Agave
-```
+
 
 Next, type in the following line in your shell:
-```
+
+.. code-block:: bash
+
 >>> ag = Agave(api_server='http://api.tacc.utexas.edu')
-```
+
 
 Once the object is instantiated, interact with it according to the API documentation and your specific usage needs.Create a new Oauth client
-```
+
+.. code-block:: bash
+
 >>> ag = Agave(api_server='https://api.tacc.utexas.edu',
 ...            username='your username',
 ...            password='your password')
 >>> ag.clients.create(body={'clientName': 'enter a client name'})
-```
+
 
 You use the consumerKey and consumerSecret to generate Oauth tokens, which are temporary credentials that you can use in place of putting your real credentials into code that is scripting against the TACC APIs.
 
@@ -161,8 +169,10 @@ Once you generate a client, you can re-use its key and secret. Clients can be cr
 ...            client_name='my_client',
 ...            api_key='kV4XLPhVBAv9RTf7a2QyBHhQAXca',
 ...            api_secret='5EbjEOcyzzIsAAE3vBS7nspVqHQa')
-```
+
 
 The Agave object ` ag` is now configured to talk to all TACC Cloud services. Here's an example: Let's retrieve a the curent user's **profile**.
 
-`` >>> ag.profiles.get()``
+.. code-block:: bash
+ 
+ >>> ag.profiles.get()
