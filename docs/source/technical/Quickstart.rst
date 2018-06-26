@@ -19,7 +19,7 @@ Installing Agave is very simple, start by typing the following in your terminal:
 
 .. code-block:: bash
 
-pip install agavepy
+>>> pip install agavepy
 
 The agavepy package is complete Python bining for TACC's Agave API. Here we can create a docker image that contains the python function and exectes it as part of the default command.
 
@@ -27,14 +27,14 @@ Now, that we have the Agavpy package install, lets create a docker image that co
 
 .. code-block:: bash
 
-def string_count():
-    message = "Hey my name is john"
-    words = message.split(' ')
-    word_count = len(words)
+>>> def string_count():
+        message = "Hey my name is john"
+        words = message.split(' ')
+        word_count = len(words)
 
-    print('Number of words is: ' + str(word_count))
+        print('Number of words is: ' + str(word_count))
 
-string_count()
+    string_count()
 
 
 Building Images From a Dockerfile
@@ -47,9 +47,11 @@ We can build images from a text file called a Dockerfile. You can think of a Doc
 The FROM instruction
 --------------------
 we can use the ``FROM`` instruction to start our new image from a known image. this should be the first line of our Dockerfile.
+
 ```
 FROM python
 ```
+
 The ADD instruction
 -------------------
 
@@ -103,23 +105,21 @@ Now that we going to register a docker container as an actor, to do this we have
 
 .. note:: Do this excerise we are going to use a a python shell. the default python shell is python 2.7.5 but we want to use python 3.6.5
 
- To begin this excerise open your `Terminal`, once you have the terminal open type in the following:
+ To begin this excerise open your ``Terminal``, once you have the terminal open type in the following:
 
-```
+.. code-block:: bash
+
 >>> python3
-```
-This checks to see if you have python3 install in not please visit the pthon website(https://www.python.org).
+
+.. note:: This checks to see if you have python3 install in not please visit the pthon website(https://www.python.org).
 
 Once you have the lastest python next you want to see if you have pip install. Similar to python the buildin version of pip is 2.7 but we want pip3 so you want to type in the follow:
 
 ```
 >>> pip3
 ```
-If you dont have pip3 install use the following to install it:
-
-```
+.. note:: If you dont have pip3 install use the following to install it:
 >>> sudo python3 get-pip.py
-```
 
 Pure Python
 -----------
@@ -128,7 +128,7 @@ Authentication and authorization to the TACC Cloud APIs uses OAuth2`_, a widely-
 
 This is covered in great detail in our Developer Documentation(http://developer.tacc.cloud/docs/abaco/developer-docs.html) but some key concepts will be highlighted here, interleaved with Python code.
 
-The first step is to create a python object called `ag` pointing to an API server. Your project likely has its own API server, which are discoverable using the `tenants-list --rich` command in the TACC cloud CLI. for now, we can assume `api.tacc.utexas.edu(the default value) will work for you.
+The first step is to create a python object called ``ag`` pointing to an API server. Your project likely has its own API server, which are discoverable using the ``tenants-list --rich`` command in the TACC cloud CLI. for now, we can assume `api.tacc.utexas.edu(the default value) will work for you.
 
 First, type in the following line in your shell:
 
