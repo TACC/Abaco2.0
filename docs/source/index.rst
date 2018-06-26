@@ -5,9 +5,9 @@ Welcome to Abaco
 .. role:: redbold
 
 .. attention:: 
-    This :ref: `welcome` is only a **sample** page :redbold: it is not the official page.
+    This :ref:`welcome` is only a **sample** page :redbold:`it is not the official page`.
     
-    This page is still under :redbold: `unconstruction`.
+    This page is still under :redbold:`unconstruction`.
     
     What is Abaco
     --------------
