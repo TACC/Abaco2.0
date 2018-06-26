@@ -46,24 +46,27 @@ The FROM instruction
 --------------------
 we can use the ``FROM`` instruction to start our new image from a known image. this should be the first line of our Dockerfile.
 
-```
+.. code-block:: bash
+
 FROM python
-```
+
 
 The ADD instruction
 -------------------
 
 We can also add local files to our image using the ``ADD`` instruction. We can add a the file ``Example.py`` in our local directory to the ``Users/kwhitley/PycharmProjects/Test`` directory in our container with the following instruction:
 
-``` 
+.. code-block:: bash
+
 ADD Example.py /Users/kwhitley/PycharmProjects/Test
-```
+
 
 The last step is write the command from running the application, which is simply- ``python ./Example.py``. We use the ``CMD`` command to do that:
 
-```
+.. code-block:: bash
+
 CMD ["python", "./Example.py"]
-```
+
 
 The primary purpose of ``CMD`` is to tell the container which command it should run when it is started. With that, our ``Dockerfile`` is now ready. This is what is looks like:
 
