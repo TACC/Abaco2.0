@@ -17,14 +17,13 @@ Installing Agave is very simple, start by typing the following in your terminal:
 
 Install from PYPI(https://pypi.org)):
 
-```
-pip install agavepy
-```
+``pip install agavepy``
 
 The agavepy package is complete Python bining for TACC's Agave API. Here we can create a docker image that contains the python function and exectes it as part of the default command.
 
 Now, that we have the Agavpy package install, lets create a docker image that contains they python function and executes it as part of the default command. First create a python file called `Example.py` and paste the same code below in it.
-```
+
+``
 def string_count():
     message = "Hey my name is john"
     words = message.split(' ')
@@ -33,7 +32,8 @@ def string_count():
     print('Number of words is: ' + str(word_count))
 
 string_count()
-```
+``
+
 Building Images From a Dockerfile
 ----------------------------------
 
@@ -150,7 +150,8 @@ Reuse an existing Oauth client
 
 Once you generate a client, you can re-use its key and secret. Clients can be created using the Python-based approach illustrated above, via the TACC Cloud CLI `clients-create` command, or by a direct, correctly-structured ` POST` to the clients web service. No matter how you've created a client, setting AgavePy up to use it works the same way:
 
-```
+.. code-block:: bash
+
 >>> from agavepy.agave import Agave
 >>> ag = Agave(api_server='https://api.tacc.utexas.edu',
 ...            username='your username', password='your password',
@@ -161,6 +162,4 @@ Once you generate a client, you can re-use its key and secret. Clients can be cr
 
 The Agave object ` ag` is now configured to talk to all TACC Cloud services. Here's an example: Let's retrieve a the curent user's **profile**.
 
-```
->>> ag.profiles.get()
-```
+`` >>> ag.profiles.get()``
