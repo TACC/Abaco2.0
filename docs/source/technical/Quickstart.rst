@@ -17,9 +17,9 @@ Installing Agave is very simple, start by typing the following in your terminal:
 
 Install from PYPI(https://pypi.org)):
 
-``
+```
 pip install agavepy
-``
+```
 
 The agavepy package is complete Python bining for TACC's Agave API. Here we can create a docker image that contains the python function and exectes it as part of the default command.
 
