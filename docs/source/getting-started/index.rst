@@ -5,7 +5,7 @@
 Getting Started
 ===================
 
-This guide will walk through the initial steps of getting account, and preparingyourself for the agave user guide tutorial.
+This guide will walk through the initial steps of getting account, and preparing yourself for the agave user guide tutorial.
 
 .. contents:: :local:
 
@@ -29,9 +29,9 @@ For additional practice to understand docker and how to run containers, please v
 Step 2: Install python3 & pip3
 ------------------------------
 
-To Do the excerises in the Agave turtorial we are going to use a a python shell The default python shell is python 2.7.5 but we want to use python 3.6.5
+To do the excerises in the Agave turtorial we are going to use a a python shell The default python shell is python 2.7.5 but we want to use python 3.6.5
 
-To check to see if you have ``python3``  open your `Terminal`, once you have theterminal open type in the following:
+To check to see if you have ``python3``  open your `Terminal`, once you have the terminal open type in the following:
 
 .. code-block:: bash
 
