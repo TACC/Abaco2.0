@@ -43,7 +43,7 @@ Next, create a docker image that contains the python function and execute it as 
 We can build images from a text file called a Dockerfile. You can think of a Dockerfile as a recipe for creating images. The instructions within a dockerfile either add files/folders to the images, add metadata to the image, or both.
 
 The FROM instruction
---------------------
+^^^^^^^^^^^^^^^^^^^^^
 we can use the ``FROM`` instruction to start our new image from a known image. this should be the first line of our Dockerfile.
 
 .. code-block:: bash
@@ -51,7 +51,7 @@ we can use the ``FROM`` instruction to start our new image from a known image. t
   FROM python
 
 The ADD instruction
--------------------
+^^^^^^^^^^^^^^^^^^^^^
 
 We can also add local files to our image using the ``ADD`` instruction. We can add a the file ``Example.py`` in our local directory to the ``Users/kwhitley/PycharmProjects/Test`` directory in our container with the following instruction:
 
@@ -102,27 +102,10 @@ Actors
 ------
 Now that we going to register a docker container as an actor, to do this we have to an API client and once we have this you only have to do the set up once!
 
-.. note:: Do this excerise we are going to use a a python shell. the default python shell is python 2.7.5 but we want to use python 3.6.5
-
-To begin this excerise open your ``Terminal``, once you have the terminal open type in the following:
-
-.. code-block:: bash
-
-  >>> python3
-
-.. note:: This checks to see if you have python3 install in not please visit the python website(https://www.python.org).
-
-Once you have the lastest python next you want to see if you have pip install. Similar to python the buildin version of pip is 2.7 but we want pip3 so you want to type in the follow:
-
-.. code-block:: bash
-
-    >>> pip3
-
-
-.. note:: If you dont have pip3 install use the following to install it: >>> sudo python3 get-pip.py
+.. note:: Do this excerise we are going to use a a python shell. python 3.6.5 and pip3 is required, if you dont have these two installed refer back to :doc:`getting-started/index`. 
 
 Pure Python
------------
+^^^^^^^^^^^^
 
 Authentication and authorization to the TACC Cloud APIs uses OAuth2`_, a widely-adopted web standard. Our implementation of Oauth2 is designed to give you the flexibility you need to script and automate use of TACC Cloud while keeping your access credentials and digital assets secure.
 
