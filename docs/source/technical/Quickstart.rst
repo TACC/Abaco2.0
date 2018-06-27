@@ -102,7 +102,7 @@ Actors
 ------
 Now that we going to register a docker container as an actor, to do this we have to an API client and once we have this you only have to do the set up once!
 
-.. note:: Do this excerise we are going to use a a python shell. python 3.6.5 and pip3 is required, refer to :doc:`getting-started/index` .
+.. note:: Do this excerise we are going to use a a python shell. python 3.6.5 and pip3 is required, refer to :doc:`getting-started` .
 
 Pure Python
 ^^^^^^^^^^^^
