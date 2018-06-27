@@ -60,7 +60,7 @@ We can also add local files to our image using the ``ADD`` instruction. We can a
   ADD Example.py /Users/kwhitley/PycharmProjects/Test
 
 
-The last step is write the command from running the application, which is simply- ``python ./Example.py``. We use the ``CMD`` command to do that:
+The last step is write the command from running the application, which is simply - ``python ./Example.py``. We use the ``CMD`` command to do that:
 
 .. code-block:: bash
 
@@ -109,7 +109,7 @@ Pure Python
 
 Authentication and authorization to the TACC Cloud APIs uses OAuth2`_, a widely-adopted web standard. Our implementation of Oauth2 is designed to give you the flexibility you need to script and automate use of TACC Cloud while keeping your access credentials and digital assets secure.
 
-This is covered in great detail in our Developer Documentation(http://developer.tacc.cloud/docs/abaco/developer-docs.html) but some key concepts will be highlighted here, interleaved with Python code.
+This is covered in great detail in our Developer Documentation but some key concepts will be highlighted here,interleaved with Python code.
 
 The first step is to create a python object called ``ag`` pointing to an API server. Your project likely has its own API server, which are discoverable using the ``tenants-list --rich`` command in the TACC cloud CLI. for now, we can assume (http://api.tacc.utexas.edu)the default value will work for you.
 
