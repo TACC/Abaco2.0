@@ -82,16 +82,16 @@ To get the message from `Abaco` do the following:
 
 from agavepy.actors import get_contex
 def string_count():
-   context = get_context()
-   try:
-       message = context['raw_message']
-   except Exception as e:
-       print("Got an exception parsing message. Aborting. Exception: {}".format(e))
-   words = message = "Hey my name is john"
-        words = message.split(' ')
-        word_count = len(words)
-        print('Number of words is: ' + str(word_count))
-    string_count()
+  context = get_context()
+  try:
+      message = context['raw_message']
+  except Exception as e:
+      print("Got an exception parsing message. Aborting. Exception: {}".format(e))
+  words = message = "Hey my name is john"
+      words = message.split(' ')
+      word_count = len(words)
+      print('Number of words is: ' + str(word_count))
+  string_count()
 
 Test
 ------
