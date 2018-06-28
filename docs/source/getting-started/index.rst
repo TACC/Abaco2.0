@@ -70,8 +70,25 @@ Once the object is instantiated, interact with it according to the API documenta
 
 You use the consumerKey and consumerSecret to generate Oauth tokens, which are temporary credentials that you can use in place of putting your real credentials into code that is scripting against the TACC APIs.
 
+-------------------------------
+Reuse an existing Oauth client
+-------------------------------
 
+Once you generate a client, you can re-use its key and secret. Clients can be created using the Python-based approach illustrated above, via the TACC Cloud CLI ``clients-create`` command, or by a direct, correctly-structured ``POST`` to the clients web service. No matter how you've created a client, setting AgavePy up to use it works the same way:
 
+.. code-block:: bash
 
+  >>> from agavepy.agave import Agave
+  >>> ag = Agave(api_server='https://api.tacc.utexas.edu',
+  ...            username='your username', password='your password',
+  ...            client_name='my_client',
+  ...            api_key='kV4XLPhVBAv9RTf7a2QyBHhQAXca',
+  ...            api_secret='5EbjEOcyzzIsAAE3vBS7nspVqHQa')
 
+Check clien is working
+^^^^^^^^^^^^^^^^^^^^^^^
+The Agave object ``ag`` is now configured to talk to all TACC Cloud services. Here's an example: Let's retrieve a the curent user's **profile**.
 
+.. code-block:: bash
+
+ >>> ag.profiles.get()
