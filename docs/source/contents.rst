@@ -12,7 +12,7 @@ Welcome to Abaco's Documentation!
    
    index
    getting-started/index
-   getting-started/abaco-quickstart
+   getting-started/quickstart
    
 
 
