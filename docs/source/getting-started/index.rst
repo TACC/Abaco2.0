@@ -36,8 +36,9 @@ To interact with the Tacc hosted Aboaco platform in Python, we will install the 
 
   $ pip install agavepy
   
+-----------------------
 Create an OAuth Client
-^^^^^^^^^^^^^^^^^^^^^^
+-----------------------
 
 Authentication and authorization to the TACC Cloud APIs uses OAuth2`_, a widely-adopted web standard. Our implementation of Oauth2 is designed to give you the flexibility you need to script and automate use of TACC Cloud while keeping your access credentials and digital assets secure.
 
