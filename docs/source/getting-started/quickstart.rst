@@ -90,4 +90,13 @@ def string_count():
          word_count = len(words)
          print('Number of words is: ' + str(word_count))
      string_count()
-     
+
+Test
+------
+
+faesfsklfjasl;dsfjakslfjls;
+kjahfjslafaklsjfslkfjsakfjas;f
+
+alfjakslfjasklfjskald;fjkdsaklfjasdlkfjas;f
+
+kaslfjlaksfdsjfasklfjslf;asfkdjfals;kfjdalsf;asf     
