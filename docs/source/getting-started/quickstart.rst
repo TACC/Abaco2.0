@@ -1,3 +1,5 @@
+.. _getting-started:
+
 ===================
 Abaco Quickstart
 ===================
