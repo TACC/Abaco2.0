@@ -23,7 +23,7 @@ To use the hosted Abaco service, please create a `TACC account <https://portal.t
 Create a Docker account
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-**Docker** is a computer program that performs operating-system-level virtualization also known as containerization. it is developed by .. _Docker,Inc: https://www.docker.com/what-docker .
+**Docker** is a computer program that performs operating-system-level virtualization also known as containerization. it is developed by  `Docker,Inc <https://www.docker.com/what-docker>`__ .
 
 Abaco pulls images for its actors from the public Docker Hub. To register actors you will need to publish images on Docker Hub, which requires a docker account `Click Here <https://hub.docker.com/>`__ . 
 
