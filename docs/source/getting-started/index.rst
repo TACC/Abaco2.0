@@ -18,7 +18,7 @@ Create a TACC account
 
 Abaco is an API platform hosted by the Texas Adavanced Computing Center(TACC). TACC designs and deploys the world's most powerful advanced computing technologies and innovative software solutions to enable reseachers to anwser complex questions.
 
-To use the hosted Abaco service, please create a .. _TACC account: https://portal.tacc.utexas.edu/account-request .
+To use the hosted Abaco service, please create a `TACC account<https://portal.tacc.utexas.edu/account-request>` .
 
 Create a Docker account
 ^^^^^^^^^^^^^^^^^^^^^^^^
