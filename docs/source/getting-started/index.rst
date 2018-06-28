@@ -71,7 +71,7 @@ Once the object is instantiated, interact with it according to the API documenta
 You use the consumerKey and consumerSecret to generate Oauth tokens, which are temporary credentials that you can use in place of putting your real credentials into code that is scripting against the TACC APIs.
 
 -------------------------------
-Reuse an existing Oauth client
+Reuse an Existing Oauth Client
 -------------------------------
 
 Once you generate a client, you can re-use its key and secret. Clients can be created using the Python-based approach illustrated above, via the TACC Cloud CLI ``clients-create`` command, or by a direct, correctly-structured ``POST`` to the clients web service. No matter how you've created a client, setting AgavePy up to use it works the same way:
