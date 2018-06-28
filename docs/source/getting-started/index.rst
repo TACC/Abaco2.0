@@ -9,9 +9,9 @@ This guide will walk through the initial steps of getting account, and preparing
 
 .. contents:: :local:
 
----------------------------------------------------
-Step 1: Account Creation and Software Installation
----------------------------------------------------
+------------------------------------------
+Account Creation and Software Installation
+------------------------------------------
 
 Create a TACC account
 ^^^^^^^^^^^^^^^^^^^^^
