@@ -115,7 +115,6 @@ Building Images From a Dockerfile
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Next, create a docker image that contains the python function and execute it as part of the default command
-
 We can build images from a text file called a Dockerfile. You can think of a Dockerfile as a recipe for creating images. The instructions within a dockerfile either add files/folders to the images, add metadata to the image, or both.
 
 The FROM instruction
