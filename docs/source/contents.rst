@@ -7,7 +7,7 @@ Welcome to Abaco's Documentation!
 =================================
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 2
    :caption: Introduction:
    
    index
