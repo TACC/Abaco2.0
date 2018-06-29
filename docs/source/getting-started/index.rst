@@ -44,7 +44,7 @@ Authentication and authorization to the TACC Cloud APIs uses OAuth2`_, a widely-
 
 This is covered in great detail in our Developer Documentation but some key concepts will be highlighted here,interleaved with Python code.
 
-The first step is to create a python object called ``ag`` pointing to an API server. Your project likely has its own API server, which are discoverable using the ``tenants-list --rich`` command in the TACC cloud CLI. for now, we can assume (http://api.tacc.utexas.edu)the default value will work for you.
+The first step is to create a python object called ``ag`` pointing to an API server. Your project likely has its own API server, which are discoverable using the ``tenants-list --rich`` command in the TACC cloud CLI. for now, we can assume (http://api.tacc.utexas.edu) the default value will work for you.
 
 First, type in the following line in your shell:
 
