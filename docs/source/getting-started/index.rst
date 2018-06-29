@@ -5,7 +5,7 @@
 Getting Started
 ===================
 
-This guide will walk through the initial steps of getting account, and preparing yourself for the Abacoo user guide tutorial.
+This guide will walk through the initial steps of getting account, and preparing yourself for the Abaco user guide tutorial.
 
 .. contents:: :local:
 
